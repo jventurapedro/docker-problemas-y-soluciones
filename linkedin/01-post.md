@@ -1,5 +1,5 @@
 Qué es el MTU
-Es el tamaño máximo de "paquete" que puede pasar por la red. Es como el buzón de casa en pleno Black Friday: las cartas entran sin problema, pero si el paquete es más grande que la ranura, no hay manera de meterlo.
+Es el tamaño máximo de "paquete" que puede pasar por la red. Es como el buzón en Black Friday: las cartas sí entran, pero el regalo en paquete no.
 
 Así lo resolví instalando Docker en Ubuntu, por etapas:
 
