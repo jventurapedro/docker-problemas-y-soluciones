@@ -12,7 +12,8 @@ Este archivo manda. Todo lo que se publique (Notion, GitHub, LinkedIn) sigue est
 - **Título del capítulo:** `NN - Qué queríamos hacer: cuál fue el error`
   - Ejemplo: `01 - Instalar Docker en Ubuntu: error de SSL por el MTU`
 - **Fecha:** formato `DD/MM/AAAA`.
-- **Mismo contenido en todas partes.** Notion y GitHub llevan el mismo texto. LinkedIn es un resumen.
+- **Entorno y error arriba del todo:** para que quien llegue desde Google (junior, pleno o senior) sepa al momento si es su caso.
+- **Mismo contenido en todas partes.** Notion y GitHub llevan el mismo texto. LinkedIn va por etapas (punto 5).
 - **Siempre se actualiza el índice** al añadir un capítulo.
 
 ## 2. Plantilla de cada capítulo (estilo del 01)
@@ -21,6 +22,8 @@ Este archivo manda. Todo lo que se publique (Notion, GitHub, LinkedIn) sigue est
 # NN - Título
 
 **Fecha:** DD/MM/AAAA
+**Entorno:** sistema · versión · dónde corre (ej. Ubuntu 26.04 · Multipass en Mac · Docker 29.10)
+**Error:** el mensaje de error exacto, tal cual sale
 
 ## Qué queríamos
 Una o dos frases + el comando que íbamos a usar.
@@ -40,6 +43,9 @@ Lista numerada corta: ¿qué compruebo? → comando.
 
 ## Lo que aprendí
 2 o 3 puntos, una frase cada uno.
+
+## Referencias
+Enlaces a la documentación oficial que hemos usado.
 ```
 
 ---
@@ -66,19 +72,45 @@ Lista numerada corta: ¿qué compruebo? → comando.
 
 ## 5. LINKEDIN
 
-- **Un post por capítulo**, después de subirlo a GitHub.
-- **Estructura del post:**
-  1. Gancho (1 línea): el problema contado de forma curiosa.
-  2. Qué quería hacer (1–2 líneas).
-  3. El error (1 línea).
-  4. Cómo lo investigué (3–5 pasos cortos).
-  5. La causa (1–2 líneas, fácil).
-  6. La solución (1 línea).
-  7. Lo que aprendí (2–3 puntos).
-  8. Enlace al capítulo en GitHub.
-  9. Hashtags: `#Docker #DevOps #Linux` + 2–3 del tema.
-- Versión en **español** e **inglés**.
+Cuando Pedro diga **"hacemos el post"**, se escribe con este patrón. El modelo es el post del capítulo 01 (`linkedin/01-post.md`).
+
+**Estilo**
+- Español de Madrid, sencillo y directo.
+- Emojis solo los necesarios: ❌ y ✅ como mucho.
+- Solo en español (en inglés solo si Pedro lo pide).
 - Lo publica Pedro.
+
+**Estructura**
+
+1. **Qué es [el concepto]**
+   Una frase que lo define + una comparación con algo cotidiano de esas fechas (ejemplo: el buzón de casa en pleno Black Friday).
+
+2. **Así lo resolví [haciendo X], por etapas:**
+
+3. **Etapas**, separadas por `━━━━━━━━━━`. Cada una con este formato:
+
+```
+ETAPA N · Título corto
+
+Escribe:
+(comando)
+
+Te saldrá algo así:
+(salida real copiada del terminal)
+
+→ Si sale X: qué significa. Sigue a la etapa N.
+→ Si sale Y: qué hacer en ese caso.
+```
+
+   - Si un comando necesita un dato (por ejemplo, el nombre de la tarjeta de red), se explica cómo sacarlo y cómo leer lo que sale.
+   - Si un comando no muestra nada, se dice: "No sale nada. Es normal."
+   - Orden habitual: El error → Comprobar la causa → Arreglarlo → Comprobar que funciona → Instalar y probar → Dejarlo fijo.
+
+4. **Lo que aprendí:** una frase que cierra con la comparación del principio.
+
+5. **Cierre:** "Si te sale otro error, búscalo en mi página, donde voy documentando cada problema de Docker y cómo lo resuelvo:" + enlace al repo.
+
+6. **Hashtags:** `#Docker #DevOps #Linux` + 1 o 2 del tema.
 
 ## 6. Orden para publicar
 
@@ -86,4 +118,4 @@ Lista numerada corta: ¿qué compruebo? → comando.
 2. Escribir el capítulo con la plantilla.
 3. Subirlo a **Notion** (subpágina + fila en el índice).
 4. Subirlo a **GitHub** (archivo + fila en el README).
-5. Publicar en **LinkedIn** con el enlace de GitHub.
+5. Escribir el post de **LinkedIn** con el patrón del punto 5. Se guarda solo en GitHub (`linkedin/NN-post.md`), no en Notion. Pedro lo publica.

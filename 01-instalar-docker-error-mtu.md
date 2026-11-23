@@ -1,6 +1,8 @@
 # 01 - Instalar Docker en Ubuntu: error de SSL por el MTU
 
-**Fecha:** 23/11/2026
+**Fecha:** 23/11/2026  
+**Entorno:** Ubuntu 26.04 LTS · Multipass en Mac (Apple Silicon) · Docker 29.10  
+**Error:** `SSL connection failed: unexpected eof while reading`
 
 ## Qué queríamos
 
@@ -80,3 +82,8 @@ Resultado: `Hello from Docker!` ✅
 
 - Si las cosas pequeñas funcionan y las descargas grandes fallan, hay que revisar el **MTU**.
 - Antes de instalar otra cosa para salir del paso, conviene buscar la causa real.
+
+## Referencias
+
+- [Instalar Docker Engine en Ubuntu (documentación oficial)](https://docs.docker.com/engine/install/ubuntu/)
+- [Netplan: referencia de configuración](https://netplan.readthedocs.io/en/stable/netplan-yaml/)
